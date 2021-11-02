@@ -11,4 +11,6 @@ public class HelloController {
 		return "Greetings from Spring Boot!";
 	}
 
+	@GetMapping("/world")
+	public String world() { return "The world is yours to explore!"; }
 }
