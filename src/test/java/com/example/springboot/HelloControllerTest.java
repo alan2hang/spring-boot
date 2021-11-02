@@ -26,4 +26,11 @@ public class HelloControllerTest {
 				.andExpect(status().isOk())
 				.andExpect(content().string(equalTo("Greetings from Spring Boot!")));
 	}
+
+	@Test
+	public void getWorld() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/world").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().string(equalTo("The world is yours to explore!")));
+	}
 }
