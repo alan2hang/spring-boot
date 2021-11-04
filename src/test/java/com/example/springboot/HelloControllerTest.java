@@ -33,4 +33,11 @@ public class HelloControllerTest {
 				.andExpect(status().isOk())
 				.andExpect(content().string(equalTo("The world is yours to explore!")));
 	}
+
+	@Test
+	public void getCurrentTime() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/now").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().string(equalTo("The current time is not fixed")));
+	}
 }
