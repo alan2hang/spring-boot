@@ -35,9 +35,9 @@ public class HelloControllerTest {
 	}
 
 	@Test
-	public void getCurrentTime() throws Exception {
+	public void getNow() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/now").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
-				.andExpect(content().string(equalTo("The current time is not fixed")));
+				.andExpect(content().string(equalTo("The current time is not fixed!")));
 	}
 }

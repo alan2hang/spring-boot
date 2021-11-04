@@ -13,4 +13,7 @@ public class HelloController {
 
 	@GetMapping("/world")
 	public String world() { return "The world is yours to explore!"; }
+
+	@GetMapping("/now")
+	public String now() { return "The current time is not fixed!"; }
 }
